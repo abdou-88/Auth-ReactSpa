@@ -1,0 +1,19 @@
+Frontend application ID client:  cfa7fd85-2550-4706-94d8-536ec0876eda
+secret : 
+
+
+Backend application ID client:  416bf09f-f763-4982-8930-6542f2d13b9f
+secret : SpO7Q~PxGaCfvr-RgpTsoEM2Xh-RMiNTYHwqj
+
+api://416bf09f-f763-4982-8930-6542f2d13b9f
+
+
+
+
+css color:
+
+#8f0000  dark red
+#ff0000  red
+#ffffff  white
+#a1a1a1  gray
+#000000  black

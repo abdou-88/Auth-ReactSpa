@@ -6,7 +6,7 @@ import { Routes, Roles, StateContext } from './shared';
 import { Navbar, Fallback, Forbidden } from '@servicestack/react';
 
 import { Home } from './components/Home';
-import { About } from './components/About';
+import { About } from './components/About/About';
 import { SignIn } from './components/SignIn';
 import { SignUp } from './components/SignUp';
 import { Profile } from './components/Profile';
@@ -40,7 +40,7 @@ export const App: React.FC<any> = () => {
                 <div className="container">
                     <Link to="/" className="navbar-brand">
                         <i className="svg-logo svg-lg mr-1" />
-                        <span className="align-middle">AbiAdvertiser</span>
+                        <span className="align-middle">Abi Advertiser</span>
                     </Link>
                     <Navbar items={state.nav.results} attributes={state.userAttributes} />
                 </div>

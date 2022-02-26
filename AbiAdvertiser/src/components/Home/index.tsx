@@ -19,7 +19,7 @@ export const Home: React.FC<any> = (props:any) => {
         <div className="col col-4">
             {state.userSession ?
             (<div className="text-right">
-                <p className="pt-3">{`Hi ${state.userSession!.displayName}!`}</p>
+                <p className="pt-3">{`Hello ${state.userSession!.displayName}!`}</p>
                 <LinkButton onClick={handleSignOut} sm primary>Sign Out</LinkButton>
             </div>) :
             (<div className="text-right">
