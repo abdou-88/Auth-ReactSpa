@@ -7,6 +7,8 @@ import { StateProvider } from './shared';
 import { App } from './App';
 
 ReactDOM.render(
-  <StateProvider><App /></StateProvider>,
-  document.getElementById('root') as HTMLElement
+  <StateProvider>
+    <App />
+  </StateProvider>,
+  document.getElementById("root") as HTMLElement
 );

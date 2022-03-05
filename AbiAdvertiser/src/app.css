@@ -5,7 +5,7 @@
 }
 .navbar {
     border-radius: 0;
-    background: #ff0000!important;
+    background: #a1a1a1!important;
 }
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
@@ -22,4 +22,8 @@ a {
 }
 .nav-button-group .btn {
     margin-bottom: .25rem;
+}
+
+#footer{
+    display: none;
 }

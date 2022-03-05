@@ -11,12 +11,17 @@ import { SignIn } from './components/SignIn';
 import { SignUp } from './components/SignUp';
 import { Profile } from './components/Profile';
 import { Admin } from './components/Admin';
+import { Orders } from "./components/Orders/Orders";
+
+
+import GALogo from "./GibAdslogo.png";
 
 export const App: React.FC<any> = () => {
     const { state } = React.useContext(StateContext);
-
-    const renderHome = () => <Home name="React" />;
+    
+    const renderHome = () => <Home name="Abi!" />;
     const renderAbout = () => <About message="About page" />;
+    const renderOrders = () => <Orders/>;
 
     const requiresAuth = (Component:any, path?:string) => {
         if (!state.userSession) {
@@ -34,30 +39,42 @@ export const App: React.FC<any> = () => {
         return () => <Component/>;
     };
 
-    return (<Router>
+    return (
+      <Router>
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark">
-                <div className="container">
-                    <Link to="/" className="navbar-brand">
-                        <i className="svg-logo svg-lg mr-1" />
-                        <span className="align-middle">Abi Advertiser</span>
-                    </Link>
-                    <Navbar items={state.nav.results} attributes={state.userAttributes} />
-                </div>
-            </nav>
-
-            <div id="content" className="container mt-4">
-                <Switch>
-                    <Route exact path={Routes.Home} render={renderHome} />
-                    <Route path={Routes.About} render={renderAbout} />
-                    <Route path={Routes.SignIn} component={SignIn} />
-                    <Route path={Routes.SignUp} component={SignUp} />
-                    <Route path={Routes.Profile} render={requiresAuth(Profile,Routes.Profile)} />
-                    <Route path={Routes.Admin} render={requiresRole(Roles.Admin,Admin,Routes.Admin)} />
-                    <Route path={Routes.Forbidden} component={Forbidden} />
-                    <Route component={Fallback} />
-                </Switch>
+          <nav className="navbar navbar-expand-lg navbar-dark">
+            <div className="container">
+              <Link to="/" className="navbar-brand">
+                <img src={GALogo} alt="#"></img>
+                <span className="align-middle">Gib Advertiser</span>
+              </Link>
+              <Navbar
+                items={state.nav.results}
+                attributes={state.userAttributes}
+              />
             </div>
+          </nav>
+
+          <div id="content" className="container mt-4">
+            <Switch>
+              <Route exact path={Routes.Home} render={renderHome} />
+              <Route path={Routes.About} render={renderAbout} />
+              <Route path={Routes.Orders} render={renderOrders} />
+              <Route path={Routes.SignIn} component={SignIn} />
+              <Route path={Routes.SignUp} component={SignUp} />
+              <Route
+                path={Routes.Profile}
+                render={requiresAuth(Profile, Routes.Profile)}
+              />
+              <Route
+                path={Routes.Admin}
+                render={requiresRole(Roles.Admin, Admin, Routes.Admin)}
+              />
+              <Route path={Routes.Forbidden} component={Forbidden} />
+              <Route component={Fallback} />
+            </Switch>
+          </div>
         </div>
-    </Router>);
+      </Router>
+    );
 }

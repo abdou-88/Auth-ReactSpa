@@ -4,8 +4,8 @@ import "font-awesome/css/font-awesome.min.css";
 import profilPic from './avatar_hat.jpg'
 export const About: React.FC<any> = (props: any) => (
   <div id="about">
-    <div className="svg-users svg-8x ml-2" />
-    <h3>{props.message}</h3>
+    {/* <div className="svg-users svg-8x ml-2" />
+    <h3>{props.message}</h3> */}
     <div className="w3-content w3-margin-top" style={{ maxWidth: "1400px" }}>
       <p></p>
 
@@ -14,16 +14,21 @@ export const About: React.FC<any> = (props: any) => (
         <div className="w3-third">
           <div className="w3-white w3-text-grey w3-card-4">
             <div className="w3-display-container">
-              <img src={profilPic} style={{ width: "100%" }} alt="Avatar"></img>
+              <img
+                src={profilPic}
+                style={{ width: "100%" }}
+                alt="Profile_Picture"
+              ></img>
               {/* style="width:100%" */}
               <div className="w3-display-bottomleft w3-container w3-text-black">
-                <h2>Jane Doe</h2>
+                <h2>Abdellah Yousfi</h2>
               </div>
             </div>
             <div className="w3-container">
+              <br></br>
               <p>
                 <i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
-                Designer
+                Web Developer
               </p>
               <p>
                 <i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
@@ -31,11 +36,11 @@ export const About: React.FC<any> = (props: any) => (
               </p>
               <p>
                 <i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
-                ex@mail.com
+                abdellah.y.ouahabi@gmail.com
               </p>
               <p>
                 <i className="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
-                1224435534
+                0048784446468
               </p>
               <hr></hr>
 
@@ -45,7 +50,7 @@ export const About: React.FC<any> = (props: any) => (
                   Skills
                 </b>
               </p>
-              <p>Adobe Photoshop</p>
+              <p>Sharepoint</p>
               <div className="w3-light-grey w3-round-xlarge w3-small">
                 <div
                   className="w3-container w3-center w3-round-xlarge w3-teal"
@@ -54,7 +59,7 @@ export const About: React.FC<any> = (props: any) => (
                   90%
                 </div>
               </div>
-              <p>Photography</p>
+              <p>Office 365</p>
               <div className="w3-light-grey w3-round-xlarge w3-small">
                 <div
                   className="w3-container w3-center w3-round-xlarge w3-teal"
@@ -63,7 +68,7 @@ export const About: React.FC<any> = (props: any) => (
                   <div className="w3-center w3-text-white">80%</div>
                 </div>
               </div>
-              <p>Illustrator</p>
+              <p>Active Directory</p>
               <div className="w3-light-grey w3-round-xlarge w3-small">
                 <div
                   className="w3-container w3-center w3-round-xlarge w3-teal"
@@ -72,7 +77,7 @@ export const About: React.FC<any> = (props: any) => (
                   75%
                 </div>
               </div>
-              <p>Media</p>
+              <p>SPFX</p>
               <div className="w3-light-grey w3-round-xlarge w3-small">
                 <div
                   className="w3-container w3-center w3-round-xlarge w3-teal"
@@ -93,22 +98,28 @@ export const About: React.FC<any> = (props: any) => (
               <div className="w3-light-grey w3-round-xlarge">
                 <div
                   className="w3-round-xlarge w3-teal"
-                  style={{ height: "24px", width: "100%" }}
-                ></div>
+                  style={{ height: "24px", width: "90%" }}
+                >
+                  fluent
+                </div>
               </div>
               <p>Spanish</p>
               <div className="w3-light-grey w3-round-xlarge">
                 <div
                   className="w3-round-xlarge w3-teal"
-                  style={{ height: "24px", width: "55%" }}
-                ></div>
+                  style={{ height: "24px", width: "100%" }}
+                >
+                  fluent
+                </div>
               </div>
-              <p>German</p>
+              <p>French</p>
               <div className="w3-light-grey w3-round-xlarge">
                 <div
                   className="w3-round-xlarge w3-teal"
-                  style={{ height: "24px", width: "25%" }}
-                ></div>
+                  style={{ height: "24px", width: "50%" }}
+                >
+                  intermediate
+                </div>
               </div>
               <br></br>
             </div>
@@ -127,10 +138,10 @@ export const About: React.FC<any> = (props: any) => (
             </h2>
             <div className="w3-container">
               <h5 className="w3-opacity">
-                <b>Front End Developer / w3schools.com</b>
+                <b>Sharepoint Developer / Lumen Tech</b>
               </h5>
               <h6 className="w3-text-teal">
-                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015
+                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2020
                 - <span className="w3-tag w3-teal w3-round">Current</span>
               </h6>
               <p>
@@ -142,11 +153,11 @@ export const About: React.FC<any> = (props: any) => (
             </div>
             <div className="w3-container">
               <h5 className="w3-opacity">
-                <b>Web Developer / something.com</b>
+                <b>IT Administrator / Lumen Tech</b>
               </h5>
               <h6 className="w3-text-teal">
-                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012
-                - Dec 2014
+                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2018
+                - Dec 2019
               </h6>
               <p>
                 Consectetur adipisicing elit. Praesentium magnam consectetur vel
@@ -157,11 +168,23 @@ export const About: React.FC<any> = (props: any) => (
             </div>
             <div className="w3-container">
               <h5 className="w3-opacity">
-                <b>Graphic Designer / designsomething.com</b>
+                <b>IT Support / Sunborn Gibraltar</b>
               </h5>
               <h6 className="w3-text-teal">
-                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010
-                - Mar 2012
+                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2013
+                - Dec 2017
+              </h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+              <br></br>
+            </div>
+
+            <div className="w3-container">
+              <h5 className="w3-opacity">
+                <b>Web Developer / ISMO</b>
+              </h5>
+              <h6 className="w3-text-teal">
+                <i className="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2009
+                - Dec 2012
               </h6>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
               <br></br>

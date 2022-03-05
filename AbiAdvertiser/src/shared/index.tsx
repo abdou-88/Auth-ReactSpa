@@ -45,6 +45,7 @@ export enum Routes {
   Profile = '/profile',
   Admin = '/admin',
   Forbidden = '/forbidden',
+  Orders = '/orders',
 }
 
 export enum Roles {
