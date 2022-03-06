@@ -6,12 +6,13 @@ import { Routes, Roles, StateContext } from './shared';
 import { Navbar, Fallback, Forbidden } from '@servicestack/react';
 
 import { Home } from './components/Home';
+import { Orders } from "./components/Orders/Orders";
 import { About } from './components/About/About';
 import { SignIn } from './components/SignIn';
 import { SignUp } from './components/SignUp';
 import { Profile } from './components/Profile';
 import { Admin } from './components/Admin';
-import { Orders } from "./components/Orders/Orders";
+
 
 
 import GALogo from "./GibAdslogo.png";
@@ -21,7 +22,7 @@ export const App: React.FC<any> = () => {
     
     const renderHome = () => <Home name="Abi!" />;
     const renderAbout = () => <About message="About page" />;
-    const renderOrders = () => <Orders/>;
+    
 
     const requiresAuth = (Component:any, path?:string) => {
         if (!state.userSession) {
@@ -59,7 +60,10 @@ export const App: React.FC<any> = () => {
             <Switch>
               <Route exact path={Routes.Home} render={renderHome} />
               <Route path={Routes.About} render={renderAbout} />
-              <Route path={Routes.Orders} render={renderOrders} />
+              <Route
+                path={Routes.Orders}
+                render={requiresAuth(Orders, Routes.Orders)}
+              />
               <Route path={Routes.SignIn} component={SignIn} />
               <Route path={Routes.SignUp} component={SignUp} />
               <Route
